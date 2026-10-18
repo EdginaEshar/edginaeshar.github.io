@@ -1,2 +1,478 @@
-<p style="text-align:center"><span style="font-size:22px"><strong>Welcome to Edgina Eshar Developer</strong></span></p>
-<p style="text-align:center"><span style="font-size:22px"><strong>I Hope u Enjoy with My Apps</strong></span></p>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgina Eshar | Official Legal &amp; Transparency Portal</title>
+    <meta name="description" content="Official Legal, Privacy Policy, Terms of Service, and Intellectual Property Portal for mobile applications published by Edgina Eshar on Google Play.">
+    <meta name="author" content="Edgina Eshar">
+    <meta name="robots" content="index, follow">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('edgina_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* LIGHT THEME (DEFAULT) */
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F8FAFC;
+            --border-subtle: #E2E8F0;
+            --border-highlight: #CBD5E1;
+            --accent-primary: #4F46E5;
+            --accent-primary-hover: #4338CA;
+            --accent-glow: rgba(79, 70, 229, 0.12);
+            --accent-cyan: #0284C7;
+            --accent-emerald: #059669;
+            --accent-rose: #E11D48;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --header-bg: rgba(255, 255, 255, 0.88);
+            --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+            --toggle-bg: #E2E8F0;
+            --toggle-thumb: #FFFFFF;
+        }
+
+        [data-theme="dark"] {
+            /* DARK THEME */
+            --bg-body: #0A0E17;
+            --bg-card: #121826;
+            --bg-card-hover: #172134;
+            --border-subtle: #1E293B;
+            --border-highlight: #334155;
+            --accent-primary: #6366F1;
+            --accent-primary-hover: #4F46E5;
+            --accent-glow: rgba(99, 102, 241, 0.18);
+            --accent-cyan: #06B6D4;
+            --accent-emerald: #10B981;
+            --accent-rose: #F43F5E;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --header-bg: rgba(10, 14, 23, 0.88);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --toggle-bg: #1E293B;
+            --toggle-thumb: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-image: 
+                radial-gradient(circle at 20% 15%, var(--accent-glow) 0%, transparent 45%),
+                radial-gradient(circle at 80% 45%, rgba(6, 182, 212, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        a { color: var(--accent-cyan); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--accent-primary); text-decoration: underline; }
+
+        header.site-header {
+            position: sticky; top: 0; z-index: 100;
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1200px; margin: 0 auto; padding: 16px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-icon {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 18px; color: #fff;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .brand-text h1 { font-size: 17px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+        .brand-text span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-cyan); font-weight: 600; }
+
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+
+        nav.header-nav { display: flex; align-items: center; gap: 6px; }
+        .nav-link {
+            padding: 8px 14px; border-radius: 8px; font-size: 13.5px;
+            font-weight: 600; color: var(--text-secondary); text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover { color: var(--text-primary); background: var(--bg-card-hover); }
+
+        /* Theme Toggle Button */
+        .theme-toggle-btn {
+            background: var(--toggle-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            width: 68px; height: 34px;
+            padding: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .theme-toggle-btn:hover { border-color: var(--border-highlight); }
+
+        .theme-toggle-thumb {
+            position: absolute;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            background: var(--toggle-thumb);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 3px;
+        }
+
+        [data-theme="dark"] .theme-toggle-thumb {
+            transform: translateX(34px);
+            background: var(--accent-primary);
+        }
+
+        .toggle-icon { font-size: 13px; z-index: 1; padding: 0 4px; user-select: none; }
+
+        /* Main Container */
+        main.main-hub {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 24px;
+            flex: 1;
+        }
+
+        .hub-hero {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 46px;
+        }
+
+        .badge-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px;
+            background: rgba(79, 70, 229, 0.08);
+            border: 1px solid rgba(79, 70, 229, 0.25);
+            border-radius: 100px;
+            font-size: 13px; font-weight: 600;
+            color: var(--accent-primary); margin-bottom: 20px;
+        }
+
+        [data-theme="dark"] .badge-pill {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.35);
+            color: #A5B4FC;
+        }
+
+        .hub-title {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hub-title span {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hub-desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Cards Grid */
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .portal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            box-shadow: var(--card-shadow);
+        }
+
+        .portal-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: transparent;
+            transition: background 0.25s ease;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-highlight);
+            box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.12);
+        }
+
+        [data-theme="dark"] .portal-card:hover {
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        .portal-card.card-privacy:hover::before { background: var(--accent-primary); }
+        .portal-card.card-terms:hover::before { background: var(--accent-emerald); }
+        .portal-card.card-disclaimer:hover::before { background: var(--accent-rose); }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+
+        .card-privacy .card-icon { background: rgba(79, 70, 229, 0.1); color: var(--accent-primary); }
+        .card-terms .card-icon { background: rgba(5, 150, 105, 0.1); color: var(--accent-emerald); }
+        .card-disclaimer .card-icon { background: rgba(225, 29, 72, 0.1); color: var(--accent-rose); }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex: 1;
+        }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .portal-card:hover .card-btn {
+            border-color: var(--border-highlight);
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        /* Banner info bottom */
+        .info-strip {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 28px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .info-strip h3 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+        .info-strip p { font-size: 13.5px; color: var(--text-muted); }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover));
+            color: #fff !important;
+            font-weight: 600;
+            font-size: 13.5px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px var(--accent-glow);
+            transition: all 0.2s ease;
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+            text-decoration: none;
+        }
+
+        footer.site-footer {
+            max-width: 1200px; margin: 40px auto 0; padding: 24px;
+            border-top: 1px solid var(--border-subtle); display: flex;
+            flex-wrap: wrap; align-items: center; justify-content: space-between;
+            gap: 16px; font-size: 13px; color: var(--text-muted);
+            width: 100%;
+        }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; }
+        .footer-links a:hover { color: var(--text-primary); }
+
+        @media (max-width: 640px) {
+            .header-container { flex-direction: column; gap: 14px; align-items: stretch; }
+            .header-actions { justify-content: space-between; width: 100%; }
+            .hub-title { font-size: 30px; }
+            .hub-hero { margin-bottom: 32px; }
+            .info-strip { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">E</div>
+                <div class="brand-text">
+                    <h1>Edgina Eshar</h1>
+                    <span>Mobile App Studio</span>
+                </div>
+            </a>
+            
+            <div class="header-actions">
+                <nav class="header-nav">
+                    <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                    <a href="terms.html" class="nav-link">Terms</a>
+                    <a href="disclaimer.html" class="nav-link">Disclaimer</a>
+                </nav>
+
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+                    <span class="toggle-icon">☀️</span>
+                    <span class="toggle-icon">🌙</span>
+                    <div class="theme-toggle-thumb"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-hub">
+        <div class="hub-hero">
+            <div class="badge-pill">
+                <span>⚡</span> Official Developer Trust &amp; Transparency Center
+            </div>
+            <h2 class="hub-title">Legal &amp; Policy <span>Portal</span></h2>
+            <p class="hub-desc">
+                Welcome to the official legal disclosure hub for all mobile applications, casual games, wallpaper personalization galleries, and productivity tools published by <strong>Edgina Eshar</strong> on the Google Play Store.
+            </p>
+        </div>
+
+        <div class="portal-grid">
+            <!-- Privacy Policy Card -->
+            <div class="portal-card card-privacy">
+                <div>
+                    <div class="card-icon">🛡️</div>
+                    <h3 class="card-title">Privacy Policy</h3>
+                    <p class="card-desc">
+                        Universal data transparency across all apps: AdMob &amp; Ad Mediation disclosures (Meta, Liftoff/Vungle, AppLovin, Unity), zero collection of private photos, and strict COPPA / GDPR compliance.
+                    </p>
+                </div>
+                <a href="privacy-policy.html" class="card-btn">
+                    <span>Read Privacy Policy</span>
+                    <span>➜</span>
+                </a>
+            </div>
+
+            <!-- Terms of Service Card -->
+            <div class="portal-card card-terms">
+                <div>
+                    <div class="card-icon">📜</div>
+                    <h3 class="card-title">Terms of Service</h3>
+                    <p class="card-desc">
+                        End-user license parameters, acceptable usage, ad-supported mediation terms, nominative fair use protection, and limitation of liability for tools and games.
+                    </p>
+                </div>
+                <a href="terms.html" class="card-btn">
+                    <span>Read Terms of Service</span>
+                    <span>➜</span>
+                </a>
+            </div>
+
+            <!-- Disclaimer Card -->
+            <div class="portal-card card-disclaimer">
+                <div>
+                    <div class="card-icon">⚖️</div>
+                    <h3 class="card-title">Disclaimer &amp; IP Defense</h3>
+                    <p class="card-desc">
+                        Anti-trademark trolling &amp; nominative fair use defense, Creative Commons wallpaper policy, tool execution notices, and universal 24–48h DMCA takedowns.
+                    </p>
+                </div>
+                <a href="disclaimer.html" class="card-btn">
+                    <span>Read Disclaimer</span>
+                    <span>➜</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="info-strip">
+            <div>
+                <h3>Need Assistance or Want to Request Content Removal?</h3>
+                <p>We process all verified creator takedown requests and user inquiries within 24–48 business hours.</p>
+            </div>
+            <a href="mailto:eka.indriyani013@gmail.com?subject=[General%20Inquiry]%20Edgina%20Eshar%20Apps" class="btn-contact">
+                ✉️ eka.indriyani013@gmail.com
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div>&copy; 2026 <strong>Edgina Eshar</strong>. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="mailto:eka.indriyani013@gmail.com">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Interactive Theme Switcher Script -->
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') || 'light';
+            const target = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', target);
+            localStorage.setItem('edgina_theme', target);
+        });
+    </script>
+
+</body>
+</html>

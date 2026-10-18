@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer &amp; IP Policy | Edgina Eshar Mobile Applications</title>
+    <meta name="description" content="Official General Disclaimer, Intellectual Property Notice, and Content Takedown Policy for applications published by Edgina Eshar.">
+    <meta name="author" content="Edgina Eshar">
+    <meta name="robots" content="index, follow">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('edgina_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* LIGHT THEME (DEFAULT) */
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F1F5F9;
+            --bg-subtle: #F1F5F9;
+            --border-subtle: #E2E8F0;
+            --border-highlight: #CBD5E1;
+            --accent-primary: #4F46E5;
+            --accent-primary-hover: #4338CA;
+            --accent-glow: rgba(79, 70, 229, 0.12);
+            --accent-cyan: #0284C7;
+            --accent-rose: #E11D48;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --header-bg: rgba(255, 255, 255, 0.88);
+            --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+            --hero-bg: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 60%, #FFF1F2 100%);
+            --callout-bg: rgba(225, 29, 72, 0.05);
+            --takedown-bg: #F8FAFC;
+            --code-bg: #FFFFFF;
+            --toggle-bg: #E2E8F0;
+            --toggle-thumb: #FFFFFF;
+        }
+
+        [data-theme="dark"] {
+            /* DARK THEME */
+            --bg-body: #0A0E17;
+            --bg-card: #121826;
+            --bg-card-hover: #172134;
+            --bg-subtle: #1E293B;
+            --border-subtle: #1E293B;
+            --border-highlight: #334155;
+            --accent-primary: #6366F1;
+            --accent-primary-hover: #4F46E5;
+            --accent-glow: rgba(99, 102, 241, 0.18);
+            --accent-cyan: #06B6D4;
+            --accent-rose: #F43F5E;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --header-bg: rgba(10, 14, 23, 0.88);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --hero-bg: linear-gradient(135deg, rgba(18, 24, 38, 0.95) 0%, rgba(23, 33, 52, 0.7) 100%);
+            --callout-bg: rgba(244, 63, 94, 0.08);
+            --takedown-bg: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(18, 24, 38, 0.8) 100%);
+            --code-bg: #0A0E17;
+            --toggle-bg: #1E293B;
+            --toggle-thumb: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding-bottom: 80px;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(225, 29, 72, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 60%, rgba(79, 70, 229, 0.06) 0%, transparent 45%);
+            background-attachment: fixed;
+        }
+
+        a { color: var(--accent-cyan); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--accent-primary); text-decoration: underline; }
+
+        header.site-header {
+            position: sticky; top: 0; z-index: 100;
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1200px; margin: 0 auto; padding: 16px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-icon {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 18px; color: #fff;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .brand-text h1 { font-size: 17px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+        .brand-text span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-cyan); font-weight: 600; }
+
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+
+        nav.header-nav { display: flex; align-items: center; gap: 6px; }
+        .nav-link {
+            padding: 8px 14px; border-radius: 8px; font-size: 13.5px;
+            font-weight: 600; color: var(--text-secondary); text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover { color: var(--text-primary); background: var(--bg-card-hover); }
+        .nav-link.active { color: #fff; background: var(--accent-primary); box-shadow: 0 2px 10px var(--accent-glow); }
+
+        .theme-toggle-btn {
+            background: var(--toggle-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            width: 68px; height: 34px;
+            padding: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .theme-toggle-btn:hover { border-color: var(--border-highlight); }
+
+        .theme-toggle-thumb {
+            position: absolute;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            background: var(--toggle-thumb);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 3px;
+        }
+
+        [data-theme="dark"] .theme-toggle-thumb {
+            transform: translateX(34px);
+            background: var(--accent-primary);
+        }
+
+        .toggle-icon { font-size: 13px; z-index: 1; padding: 0 4px; user-select: none; }
+
+        .hero-banner { max-width: 1200px; margin: 36px auto 20px; padding: 0 24px; }
+        .hero-content {
+            background: var(--hero-bg);
+            border: 1px solid var(--border-subtle); border-radius: 20px;
+            padding: 40px 36px; position: relative; overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .badge-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 14px;
+            background: rgba(225, 29, 72, 0.08);
+            border: 1px solid rgba(225, 29, 72, 0.25);
+            border-radius: 100px; font-size: 12px; font-weight: 600;
+            color: var(--accent-rose); margin-bottom: 16px;
+        }
+
+        [data-theme="dark"] .badge-pill {
+            background: rgba(244, 63, 94, 0.15);
+            border-color: rgba(244, 63, 94, 0.35);
+            color: #FDA4AF;
+        }
+
+        .hero-title {
+            font-size: 34px; font-weight: 800; letter-spacing: -0.03em;
+            color: var(--text-primary); margin-bottom: 12px; line-height: 1.25;
+        }
+
+        .hero-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 760px; line-height: 1.6; }
+
+        .meta-info {
+            display: flex; flex-wrap: wrap; gap: 20px; margin-top: 24px;
+            padding-top: 20px; border-top: 1px solid var(--border-subtle);
+            font-size: 12.5px; color: var(--text-muted);
+        }
+        .meta-info strong { color: var(--text-primary); }
+
+        .main-layout {
+            max-width: 1200px; margin: 32px auto 0; padding: 0 24px;
+            display: grid; grid-template-columns: 280px 1fr; gap: 36px; align-items: start;
+        }
+
+        aside.sidebar {
+            position: sticky; top: 90px;
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 16px; padding: 24px; box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-title {
+            font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em;
+            font-weight: 700; color: var(--text-muted); margin-bottom: 14px;
+        }
+
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .toc-link {
+            display: block; padding: 8px 12px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; color: var(--text-secondary); text-decoration: none;
+            transition: all 0.15s ease;
+        }
+        .toc-link:hover { color: var(--text-primary); background: var(--bg-subtle); text-decoration: none; }
+
+        article.content-area {
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 20px; padding: 44px 48px; box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .section-block { margin-bottom: 46px; scroll-margin-top: 90px; }
+        .section-block:last-child { margin-bottom: 0; }
+
+        .section-header {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+            padding-bottom: 12px; border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 30px; height: 30px; border-radius: 8px;
+            background: var(--bg-subtle); color: var(--accent-rose);
+            font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
+        }
+
+        .section-title { font-size: 21px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+
+        .content-area p { color: var(--text-secondary); font-size: 14.5px; margin-bottom: 16px; }
+        .content-area ul { list-style: none; margin-bottom: 20px; }
+        .content-area li { position: relative; padding-left: 24px; margin-bottom: 10px; color: var(--text-secondary); font-size: 14.5px; }
+        .content-area li::before { content: '▹'; position: absolute; left: 4px; top: 0; color: var(--accent-rose); font-weight: bold; }
+
+        .callout-box {
+            background: var(--callout-bg);
+            border-left: 4px solid var(--accent-rose);
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px; margin: 22px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-right: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .callout-box p { margin-bottom: 0; color: var(--text-primary); font-size: 14px; }
+
+        .takedown-box {
+            background: var(--takedown-bg);
+            border: 1px solid var(--border-highlight);
+            border-radius: 14px; padding: 24px; margin-top: 20px;
+        }
+        .takedown-box h4 { color: var(--text-primary); font-size: 16px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .takedown-box pre {
+            background: var(--code-bg); border: 1px solid var(--border-subtle);
+            border-radius: 8px; padding: 14px; font-family: 'JetBrains Mono', monospace;
+            font-size: 12.5px; color: var(--text-primary); overflow-x: auto; margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .btn-email {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 12px 28px; border-radius: 10px;
+            background: linear-gradient(135deg, #E11D48, #BE123C);
+            color: #FFFFFF !important; font-weight: 600; font-size: 14px;
+            box-shadow: 0 4px 16px rgba(225, 29, 72, 0.35);
+            text-decoration: none; transition: all 0.2s ease;
+        }
+        .btn-email:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(225, 29, 72, 0.5); text-decoration: none; }
+
+        footer.site-footer {
+            max-width: 1200px; margin: 60px auto 0; padding: 24px;
+            border-top: 1px solid var(--border-subtle); display: flex;
+            flex-wrap: wrap; align-items: center; justify-content: space-between;
+            gap: 16px; font-size: 13px; color: var(--text-muted);
+            transition: border-color 0.3s ease;
+        }
+
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; }
+        .footer-links a:hover { color: var(--text-primary); }
+
+        @media (max-width: 960px) {
+            .main-layout { grid-template-columns: 1fr; }
+            aside.sidebar { display: none; }
+            article.content-area { padding: 30px 24px; }
+            .hero-title { font-size: 26px; }
+        }
+
+        @media (max-width: 640px) {
+            .header-container { flex-direction: column; gap: 14px; align-items: stretch; }
+            .header-actions { justify-content: space-between; width: 100%; }
+            nav.header-nav { overflow-x: auto; padding-bottom: 4px; }
+            .nav-link { white-space: nowrap; font-size: 12.5px; padding: 6px 10px; }
+            .hero-content { padding: 26px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">E</div>
+                <div class="brand-text">
+                    <h1>Edgina Eshar</h1>
+                    <span>Mobile App Studio</span>
+                </div>
+            </a>
+            
+            <div class="header-actions">
+                <nav class="header-nav">
+                    <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                    <a href="terms.html" class="nav-link">Terms</a>
+                    <a href="disclaimer.html" class="nav-link active">Disclaimer</a>
+                </nav>
+
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+                    <span class="toggle-icon">☀️</span>
+                    <span class="toggle-icon">🌙</span>
+                    <div class="theme-toggle-thumb"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-banner">
+        <div class="hero-content">
+            <div class="badge-pill">
+                <span>⚖️</span> Legal Notice &amp; Intellectual Property
+            </div>
+            <h2 class="hero-title">General Disclaimer &amp; IP Policy</h2>
+            <p class="hero-subtitle">
+                This Disclaimer articulates the boundaries of liability, intellectual property attribution, community-generated content status, and takedown procedures governing all mobile applications published by <strong>Edgina Eshar</strong>.
+            </p>
+            <div class="meta-info">
+                <div class="meta-item">Entity: <strong>Edgina Eshar (Independent Developer)</strong></div>
+                <div class="meta-item">Effective Date: <strong>January 1, 2026</strong></div>
+                <div class="meta-item">Policy Status: <strong>Active &amp; Globally Enforced</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Disclaimer Topics</div>
+            <ul class="toc-list">
+                <li><a href="#general" class="toc-link">1. "As-Is" Warranty Disclaimer</a></li>
+                <li><a href="#wallpapers" class="toc-link">2. Wallpaper &amp; Media Policy</a></li>
+                <li><a href="#tools" class="toc-link">3. Utility &amp; Tools Disclaimer</a></li>
+                <li><a href="#games" class="toc-link">4. Games &amp; Companion Utilities</a></li>
+                <li><a href="#copyright" class="toc-link">5. Trademark Attribution</a></li>
+                <li><a href="#anti-trolling" class="toc-link">6. Anti-Trademark Trolling Defense</a></li>
+                <li><a href="#takedown" class="toc-link">7. Universal DMCA Takedown Notice</a></li>
+                <li><a href="#external" class="toc-link">8. Third-Party Ads &amp; Mediation</a></li>
+                <li><a href="#contact" class="toc-link">9. Developer Contact</a></li>
+            </ul>
+        </aside>
+
+        <article class="content-area">
+
+            <!-- Section 1 -->
+            <section id="general" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">01</span>
+                    <h3 class="section-title">"As-Is" &amp; "As-Available" Warranty Disclaimer</h3>
+                </div>
+                <p>
+                    All mobile software applications, utilities, wallpaper galleries, casual games, and associated digital assets published by <strong>Edgina Eshar</strong> are delivered strictly on an <strong>"AS-IS"</strong> and <strong>"AS-AVAILABLE"</strong> basis without warranty of any kind, whether express, statutory, or implied.
+                </p>
+                <p>
+                    To the maximum extent permitted under applicable law, Edgina Eshar expressly disclaims all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non-infringement, compatibility with external operating system updates, and uninterrupted or bug-free software operation.
+                </p>
+                <div class="callout-box">
+                    <p>
+                        We do not guarantee that our software will be perpetually uninterrupted, completely error-free, or compatible with future third-party software updates beyond our direct control.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 2: Wallpapers -->
+            <section id="wallpapers" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">02</span>
+                    <h3 class="section-title">Wallpaper &amp; Personalization Media Policy</h3>
+                </div>
+                <p>
+                    For applications providing wallpapers, home screen backgrounds, aesthetic themes, or visual personalization:
+                </p>
+                <ul>
+                    <li><strong>Creative Commons &amp; Fair Use:</strong> Visual assets curated within our wallpaper apps are collected from open creative commons platforms, publicly available design domains, or submitted by community contributors under fair-use principles.</li>
+                    <li><strong>No Ownership Claim:</strong> We do not assert proprietary copyright or commercial trademark ownership over third-party artworks, character designs, or photography showcased. All intellectual rights remain with their respective original creators.</li>
+                    <li><strong>Personal Non-Commercial Use:</strong> Wallpapers provided through our applications are intended solely for personal, non-commercial display on individual mobile devices.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3: Tools & Utilities -->
+            <section id="tools" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">03</span>
+                    <h3 class="section-title">Utility &amp; Productivity Tools Disclaimer</h3>
+                </div>
+                <p>
+                    For applications designed as tools, calculators, text processors, generators, or device utilities:
+                </p>
+                <ul>
+                    <li><strong>Informational &amp; Personal Utility:</strong> Tools are provided as casual aids and conveniences. Generated outputs, calculations, or conversions should be independently verified before being relied upon for critical, academic, or professional purposes.</li>
+                    <li><strong>Local Processing:</strong> Tools execute processing locally on your device without transmitting your inputted data to remote servers. We are not liable for accidental data loss resulting from device restarts, cache clearances, or application uninstalls.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4: Games & Fan Guides -->
+            <section id="games" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">04</span>
+                    <h3 class="section-title">Mobile Games &amp; Companion Utilities</h3>
+                </div>
+                <p>
+                    For casual games, simulation titles, or independent companion guides published by Edgina Eshar:
+                </p>
+                <ul>
+                    <li><strong>Original Games:</strong> Original casual games developed by Edgina Eshar feature proprietary logic and non-monetary in-game progression systems. In-game tokens or unlocked levels have no real-world monetary value.</li>
+                    <li><strong>Independent Companion Guides:</strong> Where an app serves as an unofficial player directory, building guide, or companion catalog for popular sandbox or simulator games (e.g., <em>Sakura School Simulator</em>, sandbox builders, or creative simulators):
+                        <ul>
+                            <li>The app is an independent fan-made utility created solely by enthusiasts to assist the community.</li>
+                            <li>The app is <strong>NOT</strong> affiliated with, sponsored by, endorsed by, or authorized by Garusoft Development Inc. or any respective original game publishers.</li>
+                            <li>Catalog items, building codes, and props coordinates are user-generated community content (UGC) shared publicly by creative players.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Section 5: Trademarks -->
+            <section id="copyright" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">05</span>
+                    <h3 class="section-title">Trademarks &amp; Brand Attribution</h3>
+                </div>
+                <p>
+                    All registered trademarks, company names, product logos, game titles, and brand assets referenced within any of our applications belong strictly to their respective proprietors:
+                </p>
+                <ul>
+                    <li><em>Sakura School Simulator</em> and its assets are the sole property of <strong>Garusoft Development Inc.</strong></li>
+                    <li>Google Play, Android, AdMob, and Firebase are trademarks of <strong>Google LLC</strong>.</li>
+                    <li>All other company, product, or service names are trademarks or registered trademarks of their respective owners. Nominative use of third-party names is solely descriptive.</li>
+                </ul>
+            </section>
+
+            <!-- Section 6: Anti-Trademark Trolling & Fair Use Defense -->
+            <section id="anti-trolling" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">06</span>
+                    <h3 class="section-title">Anti-Trademark Trolling &amp; Nominative Fair Use Defense</h3>
+                </div>
+                <p>
+                    Edgina Eshar creates independently developed mobile applications, digital utilities, wallpapers, and casual games. We maintain a firm legal defense policy protecting our software, brand, and user community against bad-faith trademark bullying, trademark trolling, and abusive intellectual property claims:
+                </p>
+                <ul>
+                    <li><strong>Nominative Fair Use Protection:</strong> Any reference to third-party game titles, platforms, operating systems, or public pop-culture terms (such as <em>Sakura School Simulator</em>, sandbox games, or Android) is strictly nominative and descriptive under established international trademark jurisprudence (including the U.S. <em>New Kids on the Block</em> standard and global equivalents). These references serve exclusively to identify compatibility, aesthetic categories, or subject matter for consumers and do not suggest sponsorship, endorsement, or commercial affiliation.</li>
+                    <li><strong>Distinct Commercial Branding:</strong> All applications published by Edgina Eshar feature distinctive proprietary logos, custom icon artwork, dedicated package namespaces, and explicit companion/guide disclaimers. There exists zero reasonable likelihood of consumer confusion regarding the origin, development, or ownership of our software.</li>
+                    <li><strong>Zero Tolerance for Bad-Faith Trademark Trolling:</strong> We actively reject and dispute illegitimate claims submitted by "trademark trolls", opportunistic claimants, or automated brand-enforcement bots attempting to claim monopolies over generic gameplay terminology, community vernacular, or descriptive phrases outside verified international trademark registrations in relevant software classifications (Nice Class 09 for downloadable software).</li>
+                    <li><strong>Statutory Counter-Notices &amp; Liability:</strong> Any fraudulent, baseless, or bad-faith takedown notice or store report targeting our applications will be vigorously challenged through formal statutory Counter-Notices and platform appeals. Please note that submitting fraudulent, deceptive, or misleading infringement claims exposes the claimant to statutory damages, legal fees, and civil liability under applicable laws (including 17 U.S.C. § 512(f) and international doctrines against malicious interference).</li>
+                </ul>
+                <div class="callout-box warning">
+                    <p>
+                        <strong>Notice to Brand Protection Agencies &amp; Rights Holders:</strong> If you are an authorized representative of a genuine trademark holder, we welcome direct, good-faith communication. Before filing automated or algorithmic platform strikes, please review our distinct branding and nominative context, or contact us directly at <a href="mailto:eka.indriyani013@gmail.com">eka.indriyani013@gmail.com</a> for immediate amicable clarification.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 7: DMCA Takedown -->
+            <section id="takedown" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">07</span>
+                    <h3 class="section-title">Universal Content Takedown Notice (DMCA)</h3>
+                </div>
+                <p>
+                    Edgina Eshar enforces a strict zero-infringement stance and deeply respects the rights of artists, photographers, game creators, and community builders. If you hold the copyright to any image, wallpaper, community code, or asset featured in any of our apps and wish for it to be removed, we will honor your request promptly.
+                </p>
+
+                <div class="takedown-box">
+                    <h4><span>📋</span> Universal Content Takedown Request Template</h4>
+                    <p>To request immediate content removal, please copy the format below and email our developer desk:</p>
+                    <pre>To: eka.indriyani013@gmail.com
+Subject: [Content Takedown Request] &lt;App Name / Asset Title&gt;
+
+Hello Developer,
+
+I am the original creator / copyright owner of the following asset:
+- Application Name: 
+- Asset Type: (e.g., Wallpaper Image / Community Code / Game Asset / Text)
+- Asset Title or Identifier: 
+- URL or Screenshot / In-App Location: 
+- Proof of Ownership: (e.g., portfolio link, creation timestamp, or original upload)
+
+Please remove this item from your application. Thank you.</pre>
+                    <p style="font-size: 13px; color: var(--text-muted);">
+                        ⚡ <strong>Processing SLA:</strong> Valid takedown requests are investigated and removed from our active databases and live servers within <strong>24 to 48 business hours</strong>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="external" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">08</span>
+                    <h3 class="section-title">Third-Party Advertisements &amp; Ad Mediation</h3>
+                </div>
+                <p>
+                    Our free applications display digital advertisements served via Google AdMob and certified ad mediation partners (including Meta Audience Network, Liftoff Monetize / Vungle, AppLovin, and Unity Ads). Our apps may also contain hyperlinks to external resources (such as official game download pages, community tutorials, or privacy policies). We do not oversee, investigate, or assume responsibility for the content, privacy practices, or commercial claims of external third-party websites or advertisements.
+                </p>
+            </section>
+
+            <!-- Section 9 -->
+            <section id="contact" class="section-block">
+                <div class="section-header">
+                    <span class="section-num">09</span>
+                    <h3 class="section-title">Legal &amp; Developer Contact</h3>
+                </div>
+                <p>
+                    For inquiries, copyright concerns, or formal notices regarding this Disclaimer, please reach out to our primary developer contact:
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="mailto:eka.indriyani013@gmail.com?subject=[Disclaimer%20Inquiry]%20Edgina%20Eshar" class="btn-email">
+                        ✉️ Email: eka.indriyani013@gmail.com
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </div>
+
+    <footer class="site-footer">
+        <div>&copy; 2026 <strong>Edgina Eshar</strong>. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="mailto:eka.indriyani013@gmail.com">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') || 'light';
+            const target = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', target);
+            localStorage.setItem('edgina_theme', target);
+        });
+    </script>
+
+</body>
+</html>
